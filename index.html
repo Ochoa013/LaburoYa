@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LABUROS YA - Desarrollo Web</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* CARRUSEL PROFESIONAL */
+    @keyframes fadeZoom {
+      0% { opacity: 0; transform: scale(1.1); }
+      5% { opacity: 1; }
+      25% { opacity: 1; transform: scale(1); }
+      30% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .carousel img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+    }
+
+    .carousel img:nth-child(1) { animation: fadeZoom 18s infinite; }
+    .carousel img:nth-child(2) { animation: fadeZoom 18s infinite; animation-delay: 6s; }
+    .carousel img:nth-child(3) { animation: fadeZoom 18s infinite; animation-delay: 12s; }
+
+    /* GRADIENTE OSCURO PRO */
+    .overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- HEADER -->
+   <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/70 backdrop-blur-xl border-b border-gray-800">
+
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+        <!-- LOGO + NOMBRE -->
+        <div class="flex items-center gap-4">
+
+        <img src="images/logo.png" 
+            alt="Logo LABUROS YA" 
+            class="h-12 md:h-14 w-auto object-contain">
+
+        <span class="font-semibold text-xl tracking-wide">
+            LABUROS <span class="text-blue-500">YA</span>
+        </span>
+
+        </div>
+
+        <!-- MENÚ -->
+        <nav class="hidden md:flex items-center gap-10 text-gray-400 text-sm font-medium">
+        <a href="#servicios" class="hover:text-white transition">Servicios</a>
+        <a href="#beneficios" class="hover:text-white transition">Beneficios</a>
+        <a href="#costos" class="hover:text-white transition">Costos</a>
+        </nav>
+
+        <!-- BOTÓN -->
+        <a href="#contacto" 
+        class="bg-blue-600 px-5 py-2.5 rounded-xl hover:bg-blue-500 transition shadow-lg font-medium">
+        Contáctanos
+        </a>
+
+    </div>
+
+    </header>
+
+  <!-- HERO -->
+   <section class="relative min-h-[70vh] md:min-h-[85vh] pt-24 flex items-center justify-center text-center overflow-hidden">
+
+    <!-- CARRUSEL -->
+    <div class="absolute inset-0 carousel">
+      <img src="images/img1.jpg">
+      <img src="images/img2.jpg">
+      <img src="images/img3.jpg">
+      <div class="absolute inset-0 overlay"></div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="relative z-10 px-6 max-w-3xl">
+
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        Creamos Páginas Web que 
+        <span class="text-blue-500">Impulsan tu Negocio</span>
+      </h1>
+
+      <p class="text-gray-300 mb-8 text-lg">
+        Diseñamos experiencias digitales modernas, rápidas y enfocadas en resultados reales.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICIOS -->
+   <section id="servicios" class="py-10 md:py-20 px-6 bg-gray-900 text-center">
+
+    <!-- TITULO -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Soluciones Digitales Profesionales
+    </h2>
+
+    <p class="text-gray-400 max-w-2xl mx-auto mb-16">
+        Desarrollamos herramientas digitales enfocadas en resultados: más clientes, mayor presencia online y crecimiento real para tu negocio.
+    </p>
+
+    <!-- CARDS -->
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
+
+        <!-- CARD 1 -->
+        <div class="bg-gray-800/60 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:scale-105 hover:border-blue-500 transition">
+
+        <h3 class="text-xl font-semibold mb-3 text-white">
+            Desarrollo Web Profesional
+        </h3>
+
+        <p class="text-gray-400 mb-4">
+            Creamos páginas web rápidas, seguras y adaptadas a cualquier dispositivo, diseñadas para captar clientes y transmitir confianza.
+        </p>
+
+        <ul class="text-gray-400 text-sm space-y-2">
+            <li>✔ Diseño moderno y responsive</li>
+            <li>✔ Optimización de velocidad</li>
+            <li>✔ Integración con redes sociales</li>
+        </ul>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-gray-800/60 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:scale-105 hover:border-blue-500 transition">
+
+        <h3 class="text-xl font-semibold mb-3 text-white">
+            Aplicaciones Web a Medida
+        </h3>
+
+        <p class="text-gray-400 mb-4">
+            Desarrollamos sistemas personalizados que automatizan procesos, mejoran la gestión y optimizan la productividad de tu negocio.
+        </p>
+
+        <ul class="text-gray-400 text-sm space-y-2">
+            <li>✔ Sistemas de gestión</li>
+            <li>✔ Paneles administrativos</li>
+            <li>✔ Automatización de tareas</li>
+        </ul>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-gray-800/60 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:scale-105 hover:border-blue-500 transition">
+
+        <h3 class="text-xl font-semibold mb-3 text-white">
+            Posicionamiento SEO
+        </h3>
+
+        <p class="text-gray-400 mb-4">
+            Mejoramos la visibilidad de tu negocio en buscadores para atraer clientes potenciales y aumentar tus oportunidades de venta.
+        </p>
+
+        <ul class="text-gray-400 text-sm space-y-2">
+            <li>✔ Optimización en Google</li>
+            <li>✔ Estrategia de palabras clave</li>
+            <li>✔ Análisis de rendimiento</li>
+        </ul>
+
+        </div>
+
+    </div>
+
+    </section>
+
+  <!-- BENEFICIOS -->
+   <section id="beneficios" class="py-16 md:py-20 px-6 text-center">
+
+  <!-- TÍTULO -->
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">
+    ¿Por qué tu negocio necesita una página web?
+  </h2>
+
+  <!-- SUBTÍTULO -->
+  <p class="text-gray-400 max-w-2xl mx-auto mb-16">
+    Una página web no es un lujo, es una herramienta clave para crecer, generar confianza y aumentar tus ingresos en el mundo digital.
+  </p>
+
+  <!-- BENEFICIOS -->
+  <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto text-left">
+
+    <!-- BLOQUE 1 -->
+    <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur hover:border-blue-500 transition">
+
+      <h3 class="text-xl font-semibold mb-4 text-white">
+        Presencia y credibilidad
+      </h3>
+
+      <ul class="text-gray-400 space-y-3">
+        <li>✔ Disponible las 24 horas para tus clientes</li>
+        <li>✔ Proyecta una imagen profesional</li>
+        <li>✔ Genera confianza en tu marca</li>
+        <li>✔ Facilita el contacto directo</li>
+      </ul>
+
+    </div>
+
+    <!-- BLOQUE 2 -->
+    <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl backdrop-blur hover:border-blue-500 transition">
+
+      <h3 class="text-xl font-semibold mb-4 text-white">
+        Crecimiento y oportunidades
+      </h3>
+
+      <ul class="text-gray-400 space-y-3">
+        <li>✔ Aumenta tus ventas y clientes potenciales</li>
+        <li>✔ Expande tu negocio a nuevos mercados</li>
+        <li>✔ Mejora el posicionamiento de tu marca</li>
+        <li>✔ Centraliza toda tu información en un solo lugar</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- COSTOS -->
+  <section id="costos" class="py-1 md:py-20 px-6 bg-gray-900 text-center">
+
+  <!-- TÍTULO -->
+  <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white tracking-tight">
+    Planes y Soluciones
+  </h2>
+
+  <!-- SUBTEXTO -->
+  <p class="text-gray-400 max-w-2xl mx-auto mb-20 text-base md:text-lg">
+    Soluciones digitales diseñadas para impulsar tu negocio con tecnología moderna, rendimiento y escalabilidad.
+  </p>
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
+
+    <!-- CARD 1 -->
+    <div class="group bg-gray-800/50 backdrop-blur border border-gray-700 p-8 rounded-2xl transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
+
+      <h3 class="text-xl font-semibold mb-6 text-white">
+        Páginas Web
+      </h3>
+
+      <ul class="text-gray-400 space-y-4 text-sm mb-8">
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Sitios informativos
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Landing pages optimizadas
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Páginas corporativas
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Tiendas online (E-commerce)
+        </li>
+
+      </ul>
+
+      <a href="#contacto" class="block text-center bg-blue-600 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-500 transition">
+        Solicitar
+      </a>
+
+    </div>
+
+    <!-- CARD 2 (DESTACADA) -->
+    <div class="relative bg-gray-800/60 backdrop-blur border-2 border-blue-600 p-8 rounded-2xl scale-105 shadow-2xl">
+
+      <!-- BADGE -->
+      <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-xs px-4 py-1 rounded-full shadow-md">
+        Más solicitado
+      </span>
+
+      <h3 class="text-xl font-semibold mb-6 text-white mt-2">
+        Apps Web
+      </h3>
+
+      <ul class="text-gray-400 space-y-4 text-sm mb-8">
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Sistemas personalizados
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Gestión de clientes
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Automatización de procesos
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Paneles administrativos
+        </li>
+
+      </ul>
+
+      <a href="#contacto" class="block text-center bg-blue-600 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-500 transition">
+        Solicitar
+      </a>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="group bg-gray-800/50 backdrop-blur border border-gray-700 p-8 rounded-2xl transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
+
+      <h3 class="text-xl font-semibold mb-6 text-white">
+        Soluciones a Medida
+      </h3>
+
+      <ul class="text-gray-400 space-y-4 text-sm mb-8">
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Desarrollo personalizado
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Integraciones con sistemas
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Arquitectura escalable
+        </li>
+
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Adaptado a cualquier sector
+        </li>
+
+      </ul>
+
+      <a href="#contacto" class="block text-center bg-blue-600 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-500 transition">
+        Solicitar
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <p class="text-gray-500 mt-16 text-sm tracking-wide">
+    Precios accesibles · Pagos flexibles · Soluciones profesionales para negocios reales
+  </p>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-16 md:py-20 px-6 text-center relative overflow-hidden">
+
+  <!-- FONDO DIFERENTE -->
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950"></div>
+
+  <!-- CONTENIDO -->
+  <div class="relative z-10">
+
+    <!-- TÍTULO -->
+    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">
+      Contáctanos
+    </h2>
+
+    <!-- SUBTEXTO -->
+    <p class="text-gray-400 mb-12 max-w-xl mx-auto">
+      Estamos listos para ayudarte a crecer y llevar tu proyecto al siguiente nivel.
+    </p>
+
+    <div class="flex flex-col items-center gap-6">
+
+      <!-- BOTONES -->
+      <div class="flex items-center gap-3">
+
+        <!-- BOTÓN WHATSAPP -->
+        <a href="https://wa.me/qr/UGRNFUBCGHB2H1" target="_blank"
+          class="inline-flex items-center gap-3 bg-green-600 px-7 py-3 rounded-xl font-medium 
+          hover:bg-green-500 transition shadow-lg hover:shadow-green-500/20">
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.44 2.13 11.9c0 1.92.5 3.8 1.46 5.46L2 22l4.78-1.54a9.86 9.86 0 0 0 5.26 1.49h.01c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.73 14.33c-.24.67-1.38 1.28-1.9 1.36-.5.08-1.14.12-1.83-.1-.42-.13-.96-.32-1.66-.62-2.92-1.26-4.83-4.2-4.98-4.4-.15-.2-1.18-1.56-1.18-2.98s.74-2.1 1-2.39c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.66.51.24.58.83 2 .9 2.15.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.32.38-.46.51-.15.13-.30.27-.13.53.17.26.76 1.25 1.63 2.03 1.12 1 2.06 1.3 2.36 1.44.3.15.47.13.65-.08.18-.2.76-.89.96-1.2.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.94.3.15.5.22.57.34.07.12.07.7-.17 1.37z"/>
+          </svg>
+
+          Escríbenos por WhatsApp
+        </a>
+
+        <!-- BOTÓN FLECHA -->
+        <button onclick="toggleQR()" 
+          class="bg-gray-800 hover:bg-gray-700 p-3 rounded-xl transition shadow-lg hover:scale-105">
+
+          <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" 
+              class="w-5 h-5 transition-transform duration-300" 
+              fill="none" viewBox="0 0 24 24" stroke="white">
+
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M19 9l-7 7-7-7"/>
+          </svg>
+
+        </button>
+
+      </div>
+
+      <!-- QR -->
+      <div id="qrContainer" 
+          class="max-h-0 overflow-hidden opacity-0 transition-all duration-500">
+
+        <div class="mt-6 p-5 bg-gray-800/60 border border-gray-700 rounded-2xl shadow-xl backdrop-blur">
+          <img src="images/link.jpg" alt="QR WhatsApp" 
+              class="w-48 mx-auto rounded-xl">
+          <p class="text-gray-400 text-sm mt-3">
+            Escanea el código para contactarnos rápidamente
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+function toggleQR() {
+  const qr = document.getElementById("qrContainer");
+  const icon = document.getElementById("arrowIcon");
+
+  if (qr.classList.contains("max-h-0")) {
+    qr.classList.remove("max-h-0", "opacity-0");
+    qr.classList.add("max-h-96", "opacity-100");
+    icon.classList.add("rotate-180");
+  } else {
+    qr.classList.add("max-h-0", "opacity-0");
+    qr.classList.remove("max-h-96", "opacity-100");
+    icon.classList.remove("rotate-180");
+  }
+}
+</script>
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 py-10 text-center text-gray-500">
+    © 2026 LABUROS YA - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>
